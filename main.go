@@ -1,12 +1,11 @@
 package main
 
 import (
-	"math"
+	"fmt"
 	"os"
 	"sort"
 	"strings"
 
-	"fmt"
 	Math "math-skills/statistics"
 )
 
@@ -37,9 +36,8 @@ func main() {
 	variance := Math.Variance(datase, Math.Average(datase))
 	stabdarddevviation := Math.StandardDeviation(variance)
 
-	fmt.Println("Average: ", math.Round(average))
-	fmt.Println("Medin: ", math.Round(medin))
-	fmt.Println("Variance: ", math.Round(variance))
-	fmt.Println("StabdardDevviation: ", math.Round(stabdarddevviation))
-
+	fmt.Printf("Average: %.0f\n", (average))
+	fmt.Printf("Median: %.0f\n", (medin))
+	fmt.Printf("Variance: %.0f\n", (variance))
+	fmt.Printf("Standard Deviation: %.0f\n", (stabdarddevviation))
 }
